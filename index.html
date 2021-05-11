@@ -6,13 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <title>E - mail List</title>
+        <title>E-mail List</title>
     </head>
     <body>
+        <h1>Generatore E-mail random</h1>
+       
         <div id="app">
-            <ul>
+            <input v-model="times" type="text" placeholder="Inserisci il numero di mail che vuoi generare">
+            <button @click="eMailGenerator(times)">Genera</button>
+            <ul v-if="eMailList">
                 <li v-for="email in eMailList"> {{email}}</li>
             </ul>
+            <p v-if="loading">Caricamento in corso . . .</p>
         </div>
         <script src="app.js"></script>
     </body>
