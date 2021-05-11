@@ -9,8 +9,8 @@ new Vue({
 
     mounted(){
         axios.get(' https://flynn.boolean.careers/exercises/api/random/mail').then((resp) =>{
-            console.log(resp)
-     
+            this.eMailList.push(resp.data.response)
+        console.log(this.eMailList)
         }) 
     }
 
