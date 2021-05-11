@@ -3,7 +3,7 @@ new Vue({
 
     data:{
 
-        eMailList = []
+        eMailList: [],
 
     },
 
