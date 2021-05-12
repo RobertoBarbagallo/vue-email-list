@@ -4,3 +4,37 @@
     box-sizing: border-box;
 }
 
+#app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+h1, ul{
+    padding: 20px 0;
+}
+
+h1{
+    text-align: center;
+    background-color: lightsteelblue;
+}
+
+input{
+    margin: 20px 0;
+    width: 300px;
+    border-radius: 8px;
+}
+input:focus{
+    outline: none;
+}
+
+
+ul{
+    list-style: none;
+    text-align: center; 
+}
+
+li{
+    padding: 10px 0;  
+}

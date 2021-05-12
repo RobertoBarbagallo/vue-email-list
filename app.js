@@ -13,6 +13,8 @@ new Vue({
     methods: {
 
         eMailGenerator(times) {
+            this.times = ""
+            this.eMailList = ""
             const secTempList = [];
             this.loading = true;
 
