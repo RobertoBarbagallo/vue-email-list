@@ -13,7 +13,7 @@
         <h1>Generatore E-mail random</h1>
        
         <div id="app">
-            <input v-model="times" type="text" placeholder="Inserisci il numero di mail che vuoi generare">
+            <input v-model.number="times" type="text" placeholder="Inserisci il numero di mail che vuoi generare">
             <button @click="eMailGenerator(times)">Genera</button>
             <ul v-if="eMailList">
                 <li v-for="email in eMailList"> {{email}}</li>

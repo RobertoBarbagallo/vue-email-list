@@ -5,9 +5,7 @@ new Vue({
 
         eMailList: [],
         times: "",
-        tempList: [],
         loading: false
-
     },
 
     methods: {
@@ -15,25 +13,23 @@ new Vue({
         eMailGenerator(times) {
             this.times = ""
             this.eMailList = ""
-            const secTempList = [];
+            const tempList = [];
             this.loading = true;
 
             for (let index = 0; index < times; index++) {
                 axios.get(' https://flynn.boolean.careers/exercises/api/random/mail').then((resp) => {
 
-                    secTempList.push(resp.data.response);
+                    tempList.push(resp.data.response);
 
-                    if (secTempList.length == times) {
-                        this.tempList = secTempList;
-                        this.render();
+                    if (tempList.length == times) {
+                        this.render(tempList);
                     }
                 });
             }
         },
 
-        render() {
-            this.eMailList = this.tempList;
-            console.log(this.eMailList);
+        render(tempList) {
+            this.eMailList = tempList;
             this.loading = false;
         }
     },
